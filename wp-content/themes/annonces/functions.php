@@ -7,8 +7,8 @@ function create_custom_post_type(){
         'name'               => 'Annonces',
         'singular_name'      => 'Annonce',
         'all_items'          => 'Toutes les annonces',
-        'add_new'            => 'Ajouter un annonce',
-        'add_new_item'       => 'Ajouter un annonce',
+        'add_new'            => 'Ajouter une annonce',
+        'add_new_item'       => 'Ajouter une annonce',
         'edit_item'          => "modifier l'annonce",
         'new_item'           => 'Nouvelle annonce',
         'view_item'          => "Voir l'annonce",
@@ -38,3 +38,31 @@ function create_custom_post_type(){
     );
     register_post_type( 'annonce', $args );
 }
+
+
+add_action('init','create_taxonomy');
+function create_taxonomy(){
+  
+  $taxonomy="categorie-annonce";
+  $object_type=array("annonce");
+  $args = array(
+          'label' => 'Catégorie de l\'annonce',
+          'rewrite' => array( 'slug' => 'categorie-annonce' ),
+          'hierarchical' => true,
+      );
+  register_taxonomy( $taxonomy, $object_type, $args );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
