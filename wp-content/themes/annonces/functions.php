@@ -51,7 +51,36 @@ function create_taxonomy(){
           'hierarchical' => true,
       );
   register_taxonomy( $taxonomy, $object_type, $args );
+  
+  
+  $taxonomy="categorie-mots-cles";
+  $object_type=array("annonce");
+  $args = array(
+          'label' => 'Mots clés de l\'annonce',
+          'rewrite' => array( 'slug' => 'mots-cles-annonce' ),
+          'hierarchical' => false,
+      );
+  register_taxonomy( $taxonomy, $object_type, $args );
 }
+
+add_action('after_switch_theme', 'create_new_role');
+function create_new_role(){
+  add_role(
+    'internaute',
+    'Internaute',
+    array(
+        'read'         => true,  // true allows this capability
+        'edit_posts'   => true,
+        'delete_posts' => false, // Use false to explicitly deny
+    )
+  );
+}
+
+
+
+
+
+
 
 
 
