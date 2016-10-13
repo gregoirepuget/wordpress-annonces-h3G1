@@ -34,7 +34,12 @@ function create_custom_post_type(){
         'has_archive'         => false,
         'query_var'           => true,
         'can_export'          => true,
-        'rewrite'             => array( 'slug' => 'annonce' )
+        'rewrite'             => array( 'slug' => 'annonce' ),
+      'capabilities' => array(
+        'edit_post'          => 'edit_annonce',
+        'read_post'          => 'read_annonce', 
+        'create_posts'       => 'create_annonces', 
+      ),
     );
     register_post_type( 'annonce', $args );
 }
@@ -70,10 +75,18 @@ function create_new_role(){
     'Internaute',
     array(
         'read'         => true,  // true allows this capability
-        'edit_posts'   => true,
+        'edit_annonce'   => true,
+        'read_annonce'   => true,
+        'create_annonces'   => true,
         'delete_posts' => false, // Use false to explicitly deny
     )
   );
+  
+  $role = get_role( 'administrator');
+  $role->add_cap('edit_annonce');
+  $role->add_cap('create_annonces');
+  $role->add_cap('read_annonce');
+  
 }
 
 
