@@ -35,11 +35,11 @@ function create_custom_post_type(){
         'query_var'           => true,
         'can_export'          => true,
         'rewrite'             => array( 'slug' => 'annonce' ),
-      'capabilities' => array(
+     /* 'capabilities' => array(
         'edit_post'          => 'edit_annonce',
         'read_post'          => 'read_annonce', 
         'create_posts'       => 'create_annonces', 
-      ),
+      ),*/
     );
     register_post_type( 'annonce', $args );
 }

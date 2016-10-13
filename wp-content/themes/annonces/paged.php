@@ -19,15 +19,7 @@
           $the_query->the_post();
       ?>
       <article class="col-md-4" id="annonce-<?php the_ID(); ?>">
-       <?php
-        if(has_post_thumbnail())
-        {
-          echo '<div class="responsiveImg">';
-          the_post_thumbnail("thumbnail_annonce_small");
-          echo '</div>';
-        }
-        ?>
-        <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+        <h3><?php the_title(); ?></h3>
         <?php the_content(); ?>
         <span class="prix"><strong>Prix : </strong><?php the_field("prix"); ?> €</span>
       </article>
