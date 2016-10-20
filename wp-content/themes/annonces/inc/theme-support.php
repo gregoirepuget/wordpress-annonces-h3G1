@@ -8,6 +8,7 @@ function thumbnails_theme_support(){
 add_action( 'after_setup_theme', 'images_sizes' );
 function images_sizes()
 {
-add_image_size("thumbnail_annonce_small",600,450,true);
-add_image_size("thumbnail_annonce_full",1600,600,false);
+  add_image_size("thumbnail_annonce_small",600,450,true);
+  add_image_size("thumbnail_annonce_full",1600,600,false);
+  add_image_size("thumbnail_slide",1600,800,true);
 }
