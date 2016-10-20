@@ -12,3 +12,9 @@ function images_sizes()
   add_image_size("thumbnail_annonce_full",1600,600,false);
   add_image_size("thumbnail_slide",1600,800,true);
 }
+
+add_action( 'after_setup_theme', 'menus_du_themes' );
+function menus_du_themes() {
+  register_nav_menu( 'header', 'Menu entête' );
+}
+
