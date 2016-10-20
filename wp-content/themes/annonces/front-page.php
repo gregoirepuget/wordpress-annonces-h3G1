@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+
+<?php
+// va chercher fichier views/slider.php
+get_template_part("views/slider");
+?>
+
 <section id="main" class="container">
   <h1>Accueil : <?php bloginfo("title"); ?></h1>
   <h2><?php bloginfo("description") ; ?></h2>
