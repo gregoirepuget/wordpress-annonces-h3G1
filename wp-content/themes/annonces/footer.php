@@ -1,4 +1,4 @@
- <footer id="footer">
+        <footer id="footer">
         <!--
             Tout le contenu de la partie head de mon site
          -->

@@ -1,23 +1,23 @@
 <?php
-add_action('init','create_taxonomy');
-function create_taxonomy(){
-  
-  $taxonomy="categorie-annonce";
-  $object_type=array("annonce");
+add_action('init', 'create_custom_taxonomy');
+function create_custom_taxonomy(){
   $args = array(
-          'label' => 'Catégorie de l\'annonce',
+          'label' => 'Catégorie annonce',
           'rewrite' => array( 'slug' => 'categorie-annonce' ),
           'hierarchical' => true,
       );
-  register_taxonomy( $taxonomy, $object_type, $args );
+  register_taxonomy( 
+    'categorie-annonce',
+    array('annonce'),
+     $args ); 
   
-  
-  $taxonomy="categorie-mots-cles";
-  $object_type=array("annonce");
-  $args = array(
-          'label' => 'Mots clés de l\'annonce',
+  $args2 = array(
+          'label' => 'Mots-clés annonce',
           'rewrite' => array( 'slug' => 'mots-cles-annonce' ),
           'hierarchical' => false,
       );
-  register_taxonomy( $taxonomy, $object_type, $args );
+  register_taxonomy( 
+    'mots-cles-annonce',
+    array('annonce'),
+     $args2 ); 
 }

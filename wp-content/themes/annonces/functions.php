@@ -1,17 +1,33 @@
 <?php
 
-// CREATE CUSTOM POST TYPES
-include_once("inc/custom_post_types.php");
+// CREATION CUSTOM POST TYPES
+include_once('inc/custom_post_types.php');
 
-// CREATE TAXONOMIES
-include_once("inc/taxonomies.php");
+// CREATION TAXONOMIES
+include_once('inc/taxonomies.php');
 
-// CREATE ROLES
-include_once("inc/roles.php");
+// CREATION ROLES
+include_once('inc/roles.php');
 
-// THEMES SUPPORT
-include_once("inc/theme-support.php");
+// CREATION STYLES SCRIPTS
+include_once('inc/scripts_styles.php');
 
-// THEMES SUPPORT
-include_once("inc/styles_scripts.php");
+// THEME SUPPORT
+include_once('inc/theme_support.php');
+
+// AJAX FUNCTIONS
+include_once('inc/ajax.php');
+
+
+
+
+
+
+
+
+
+
+
+
+
 

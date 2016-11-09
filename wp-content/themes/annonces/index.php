@@ -1,7 +1,6 @@
 <?php get_header(); //appel du template header.php  ?>
 
 <div id="content">
-   
     <h1>Contenu Principal</h1>
     <?php
     // boucle WordPress
